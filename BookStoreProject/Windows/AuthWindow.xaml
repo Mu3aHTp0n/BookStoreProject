@@ -5,7 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookStoreProject.Windows"
         mc:Ignorable="d"
-        Title="AuthWindow" Height="450" Width="800">
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        Title="Окно авторизации" 
+        WindowStartupLocation="CenterScreen"
+        MinHeight="400" MinWidth="400"
+        Height="450" Width="800">
     <Grid>
         <Button HorizontalAlignment="Right"
                 VerticalAlignment="Top"

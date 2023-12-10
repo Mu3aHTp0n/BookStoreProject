@@ -52,6 +52,7 @@
              Foreground="#F5F5F5"
              FontFamily="Arial"
              FontSize="20"
+             MinHeight="75"             
              Content="Клиенты" Click="Button_Click"/>
             <Button Grid.Row="0" Grid.Column="1"
              Margin = "15"
@@ -59,6 +60,7 @@
              Foreground="#F5F5F5"
              FontFamily="Arial"
              FontSize="20"
+             MinHeight="75" 
              Content="Сотрудники" Click="Button_Click_1"/>
             <Button Grid.Row="1" Grid.Column="0"
              Margin = "15"
@@ -66,6 +68,7 @@
              Foreground="#F5F5F5"
              FontFamily="Arial"
              FontSize="20"
+             MinHeight="75" 
              Content="Заказы" Click="Button_Click_2"/>
             <Button Grid.Row="1" Grid.Column="1"
              Margin = "15"
@@ -73,6 +76,7 @@
              Foreground="#F5F5F5"
              FontFamily="Arial"
              FontSize="20"
+             MinHeight="75" 
              Content="Товары" Click="Button_Click_3"/>
         </Grid>
     </Grid>

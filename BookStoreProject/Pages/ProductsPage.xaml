@@ -52,28 +52,28 @@
              Background="#698AFF"
              Foreground="#F5F5F5"
              FontFamily="Arial"
-             FontSize="30"
+             FontSize="24"
              Content="Добавить" Margin="10" />
 
             <Button Grid.Row="1"
              Background="#698AFF"
              Foreground="#F5F5F5"
              FontFamily="Arial"
-             FontSize="30"
+             FontSize="24"
              Content="Обновить" Margin="10" />
 
             <Button Grid.Row="2"
              Background="#698AFF"
              Foreground="#F5F5F5"
              FontFamily="Arial"
-             FontSize="30"
+             FontSize="24"
              Content="Удалить" Margin="10" />
 
             <Button Grid.Row="3"
              Background="#698AFF"
              Foreground="#F5F5F5"
              FontFamily="Arial"
-             FontSize="30"
+             FontSize="24"
              Content="Выгрузить" Margin="10" />
         </Grid>
     </Grid>
