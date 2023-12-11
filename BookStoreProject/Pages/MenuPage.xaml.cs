@@ -25,7 +25,9 @@ namespace BookStoreProject.Pages
         {
             InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        #region Navigation
+        private void ToClient(object sender, RoutedEventArgs e)
         {
             ClientsPage examplePage = new ClientsPage();
             MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
@@ -34,7 +36,7 @@ namespace BookStoreProject.Pages
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void ToEmployees(object sender, RoutedEventArgs e)
         {
             EmployeesPage examplePage = new EmployeesPage();
             MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
@@ -42,7 +44,7 @@ namespace BookStoreProject.Pages
             mainWindow.MainFrame.Navigate(examplePage);
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void ToOrders(object sender, RoutedEventArgs e)
         {
             OrdersPage examplePage = new OrdersPage();
             MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
@@ -50,17 +52,20 @@ namespace BookStoreProject.Pages
             mainWindow.MainFrame.Navigate(examplePage);
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void ToProducts(object sender, RoutedEventArgs e)
         {
             ProductsPage examplePage = new ProductsPage();
             MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
             mainWindow.Title = examplePage.Title;
             mainWindow.MainFrame.Navigate(examplePage);
         }
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private void Exit(object sender, RoutedEventArgs e)
         {
             AuthWindow authWindow = new AuthWindow();
             authWindow.Show();
         }
+        #endregion
+
+
     }
 }

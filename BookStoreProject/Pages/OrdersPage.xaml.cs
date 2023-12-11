@@ -25,7 +25,7 @@ namespace BookStoreProject.Pages
         {
             InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ToMenu(object sender, RoutedEventArgs e)
         {
             MenuPage menuPage = new MenuPage();
             MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
