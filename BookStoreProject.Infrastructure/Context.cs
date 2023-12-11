@@ -27,19 +27,19 @@ namespace BookStoreProject.Infrastructure
             modelBuilder.Entity<AuthorEntity>()
                 .HasMany(e => e.Book)
                 .WithRequired(e => e.Author)
-                .HasForeignKey(e => e.Author_ID)
+                .HasForeignKey(e => e.AuthorId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<BookEntity>()
                 .HasMany(e => e.Ordering)
                 .WithRequired(e => e.Book)
-                .HasForeignKey(e => e.Book_ID)
+                .HasForeignKey(e => e.BookId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<GenreEntity>()
                 .HasMany(e => e.Book)
                 .WithRequired(e => e.Genre)
-                .HasForeignKey(e => e.Genre_ID)
+                .HasForeignKey(e => e.GenreId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<OrderingEntity>()
@@ -49,19 +49,19 @@ namespace BookStoreProject.Infrastructure
             modelBuilder.Entity<PeopleEntity>()
                 .HasMany(e => e.Ordering)
                 .WithRequired(e => e.People)
-                .HasForeignKey(e => e.People_ID)
+                .HasForeignKey(e => e.PeopleId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PublisherEntity>()
                 .HasMany(e => e.Book)
                 .WithRequired(e => e.Publisher)
-                .HasForeignKey(e => e.Publisher_ID)
+                .HasForeignKey(e => e.PublisherId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<RoleEntity>()
                 .HasMany(e => e.People)
                 .WithRequired(e => e.Role)
-                .HasForeignKey(e => e.Role_ID)
+                .HasForeignKey(e => e.RoleId)
                 .WillCascadeOnDelete(false);
         }
     }

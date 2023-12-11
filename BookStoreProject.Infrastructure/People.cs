@@ -35,7 +35,7 @@ namespace BookStoreProject.Infrastructure
         [StringLength(2147483647)]
         public string DateOfBirth { get; set; }
 
-        public long Role_ID { get; set; }
+        public long RoleId { get; set; }
 
         [StringLength(2147483647)]
         public string UserLogin { get; set; }

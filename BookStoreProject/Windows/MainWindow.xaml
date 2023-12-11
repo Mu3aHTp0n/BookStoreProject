@@ -9,7 +9,7 @@
         WindowStartupLocation="CenterScreen"
         MinWidth="800"  MinHeight="450"
         Width="850" Height="500"
-        MaxWidth="1920"  MaxHeight="1080">
+        MaxWidth="1200"  MaxHeight="550">
     <Grid>
         <Frame x:Name="MainFrame"
          NavigationUIVisibility="Hidden" 
@@ -23,14 +23,14 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Ellipse Width="90" Height="90" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Center">
+            <Ellipse Width="100" Height="100" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Center">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/Windows/logo.png"  />
                 </Ellipse.Fill>
             </Ellipse>
             <Label Content="Книжный магазин &quot;Hayasaka-sama&quot;" 
                    Foreground="#FF698AFF" 
-                   FontFamily="Arial" FontSize="14" 
+                   FontFamily="Arial" FontSize="24" 
                    Grid.Column="1" 
                    Width="500" Height="98" 
                    HorizontalAlignment="Right" VerticalAlignment="Center">

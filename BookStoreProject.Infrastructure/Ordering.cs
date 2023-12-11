@@ -11,9 +11,9 @@ namespace BookStoreProject.Infrastructure
     {
         public long ID { get; set; }
 
-        public long People_ID { get; set; }
+        public long PeopleId { get; set; }
 
-        public long Book_ID { get; set; }
+        public long BookId { get; set; }
 
         public long Count { get; set; }
 

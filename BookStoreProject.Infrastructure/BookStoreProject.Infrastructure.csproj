@@ -65,6 +65,16 @@
     <Compile Include="Author.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="Context.cs" />
+    <Compile Include="Database\AuthorRepository.cs" />
+    <Compile Include="Database\BookRepository.cs" />
+    <Compile Include="Database\DiscountRepository.cs" />
+    <Compile Include="Database\GenreRepository.cs" />
+    <Compile Include="Database\IBaseRepository.cs" />
+    <Compile Include="Database\OrderingRepository.cs" />
+    <Compile Include="Database\PeopleRepository.cs" />
+    <Compile Include="Database\PublisherRepository.cs" />
+    <Compile Include="Database\RoleRepository.cs" />
+    <Compile Include="Database\UserRepository.cs" />
     <Compile Include="Discount.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="Ordering.cs" />
@@ -73,10 +83,22 @@
     <Compile Include="Publisher.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="ViewModels\AuthorViewModel.cs" />
+    <Compile Include="ViewModels\BookViewModel.cs" />
+    <Compile Include="ViewModels\DiscountViewModel.cs" />
+    <Compile Include="ViewModels\GenreViewModel.cs" />
+    <Compile Include="ViewModels\OrderingViewModel.cs" />
+    <Compile Include="ViewModels\PeopleViewModel.cs" />
+    <Compile Include="ViewModels\PublisherViewModel.cs" />
+    <Compile Include="ViewModels\RoleViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mappers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

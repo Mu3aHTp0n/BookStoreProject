@@ -39,7 +39,19 @@
              Margin="10 20"
              MaxHeight="100"/>
 
-
+        <DataGrid Grid.Row="2" AutoGenerateColumns="False" CanUserReorderColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия"  
+                                    Width="*" 
+                                    Binding="{Binding SurName}"/>
+                <DataGridTextColumn Header="Имя"
+                                    Width="*"
+                                    Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Отчество"
+                                    Width="*"
+                                    Binding="{Binding SecondName}"/>
+            </DataGrid.Columns>
+        </DataGrid>
         <Grid Grid.RowSpan="3" Grid.Row="2"
          Grid.Column="1">
             <Grid.RowDefinitions>

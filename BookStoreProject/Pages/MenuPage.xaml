@@ -29,11 +29,16 @@
             MinWidth="150" MinHeight="50"
             Click="Button_Click_4"/>
 
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2"
+                    Margin="20">
             <TextBlock x:Name="userName"
-                Text="Пользователь:" FontFamily="Arial" FontSize="14" Foreground="#FF698AFF"/>
+                       Text="Пользователь:" 
+                       FontFamily="Arial" FontSize="16" 
+                       Foreground="#FF698AFF"/>
             <TextBlock x:Name="userRole"
-                Text="Роль:" FontFamily="Arial" FontSize="14" Foreground="#FF698AFF"/>
+                       Text="Роль:" 
+                       FontFamily="Arial" FontSize="16" 
+                       Foreground="#FF698AFF"/>
         </StackPanel>
 
         <Grid Grid.Row="2" Grid.ColumnSpan="2">
@@ -46,13 +51,13 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="0" Grid.Column="0"
+            <Button
              Margin = "15"
              Background="#698AFF"
              Foreground="#F5F5F5"
              FontFamily="Arial"
              FontSize="20"
-             MinHeight="75"             
+             MinHeight="75"
              Content="Клиенты" Click="Button_Click"/>
             <Button Grid.Row="0" Grid.Column="1"
              Margin = "15"

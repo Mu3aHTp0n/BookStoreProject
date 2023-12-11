@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreProject", "BookStoreProject\BookStoreProject.csproj", "{B73EAFE9-38B7-4245-845B-FB24AAAC4BB7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{33F1F1A1-CB6D-48A7-9857-0EDA9E0C9E32} = {33F1F1A1-CB6D-48A7-9857-0EDA9E0C9E32}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStoreProject.Infrastructure", "BookStoreProject.Infrastructure\BookStoreProject.Infrastructure.csproj", "{33F1F1A1-CB6D-48A7-9857-0EDA9E0C9E32}"
 EndProject

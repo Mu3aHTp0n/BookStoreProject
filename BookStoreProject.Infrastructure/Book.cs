@@ -17,11 +17,11 @@ namespace BookStoreProject.Infrastructure
 
         public long ID { get; set; }
 
-        public long Author_ID { get; set; }
+        public long AuthorId { get; set; }
 
-        public long Publisher_ID { get; set; }
+        public long PublisherId { get; set; }
 
-        public long Genre_ID { get; set; }
+        public long GenreId { get; set; }
 
         [Required]
         [StringLength(2147483647)]
