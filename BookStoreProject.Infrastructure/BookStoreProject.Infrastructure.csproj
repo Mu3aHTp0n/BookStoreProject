@@ -77,6 +77,15 @@
     <Compile Include="Database\UserRepository.cs" />
     <Compile Include="Discount.cs" />
     <Compile Include="Genre.cs" />
+    <Compile Include="Mappers\AuthorMapper.cs" />
+    <Compile Include="Mappers\BookMapper.cs" />
+    <Compile Include="Mappers\DiscountMapper.cs" />
+    <Compile Include="Mappers\GenreMapper.cs" />
+    <Compile Include="Mappers\OrderingMapper.cs" />
+    <Compile Include="Mappers\PeopleMapper.cs" />
+    <Compile Include="Mappers\PublisherMapper.cs" />
+    <Compile Include="Mappers\RoleMapper.cs" />
+    <Compile Include="Mappers\UserMapper.cs" />
     <Compile Include="Ordering.cs" />
     <Compile Include="People.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,9 +106,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mappers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
