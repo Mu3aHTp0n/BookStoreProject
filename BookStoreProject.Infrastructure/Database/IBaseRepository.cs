@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookStoreProject.Infrastructure.Database
 {
-    internal interface IBaseRepository<TEntity>
+    public interface IBaseRepository<TEntity>
     {
         TEntity GetById(long id);
         List<TEntity> GetList();

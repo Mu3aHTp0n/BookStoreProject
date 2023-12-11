@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookStoreProject.Infrastructure.ViewModels
 {
-    internal class AuthorViewModel
+    public class AuthorViewModel
     {
         public long ID { get; set; }
 
