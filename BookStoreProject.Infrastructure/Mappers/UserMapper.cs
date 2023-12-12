@@ -9,9 +9,21 @@ namespace BookStoreProject.Infrastructure.Mappers
 {
     public class UserMapper
     {
-        internal static List<UserViewModel> Map(List<UserEntity> items)
+        public static UserViewModel Map(UserEntity entity)
         {
-            throw new NotImplementedException();
+            var viewModel = new UserViewModel
+            {
+                Login = entity.Login,
+                Password = entity.Password,
+            };
+            return viewModel;
         }
+
+        public static List<UserViewModel> Map(List<UserEntity> entities)
+        {
+            var viewModels = entities.Select(x => Map(x)).ToList();
+            return viewModels;
+        }
+
     }
 }

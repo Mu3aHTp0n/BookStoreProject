@@ -17,7 +17,7 @@ namespace BookStoreProject.Infrastructure.Mappers
                 SecondName = entity.SecondName,
                 Name = entity.Name,
                 SurName = entity.SurName,
-                Sex = entity.Sex == "м" ? "мужской" : "женский",
+                Sex = entity.Sex,
                 DateOfBirth = entity.DateOfBirth,
                 RoleId = entity.RoleId,
                 UserLogin = entity.UserLogin,

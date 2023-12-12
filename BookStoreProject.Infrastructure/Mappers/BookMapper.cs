@@ -9,14 +9,26 @@ namespace BookStoreProject.Infrastructure.Mappers
 {
     public class BookMapper
     {
-        internal static List<BookViewModel> Map(List<BookEntity> items)
+        public static BookViewModel Map(BookEntity entity)
         {
-            throw new NotImplementedException();
+            var viewModel = new BookViewModel
+            {
+                ID = entity.ID,
+                AuthorId = entity.AuthorId,
+                PublisherId = entity.PublisherId,
+                GenreId = entity.GenreId,
+                Title = entity.Title,
+                Cost = entity.Cost,
+                Quantity = entity.Quantity,
+            };
+            return viewModel;
         }
 
-        internal static BookViewModel Map(BookEntity item)
+        public static List<BookViewModel> Map(List<BookEntity> entities)
         {
-            throw new NotImplementedException();
+            var viewModels = entities.Select(x => Map(x)).ToList();
+            return viewModels;
         }
+
     }
 }

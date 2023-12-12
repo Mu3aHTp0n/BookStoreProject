@@ -9,14 +9,24 @@ namespace BookStoreProject.Infrastructure.Mappers
 {
     public class OrderingMapper
     {
-        internal static OrderingViewModel Map(OrderingEntity item)
+        public static OrderingViewModel Map(OrderingEntity entity)
         {
-            throw new NotImplementedException();
+            var viewModel = new OrderingViewModel
+            {
+                ID = entity.ID,
+                PeopleId = entity.PeopleId,
+                BookId = entity.BookId,
+                Count = entity.Count,
+                Date = entity.Date,
+            };
+            return viewModel;
         }
 
-        internal static List<OrderingViewModel> Map(List<OrderingEntity> items)
+        public static List<OrderingViewModel> Map(List<OrderingEntity> entities)
         {
-            throw new NotImplementedException();
+            var viewModels = entities.Select(x => Map(x)).ToList();
+            return viewModels;
         }
+
     }
 }

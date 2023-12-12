@@ -9,14 +9,22 @@ namespace BookStoreProject.Infrastructure.Mappers
 {
     public class GenreMapper
     {
-        internal static List<GenreViewModel> Map(List<GenreEntity> items)
+        public static GenreViewModel Map(GenreEntity entity)
         {
-            throw new NotImplementedException();
+            var viewModel = new GenreViewModel
+            {
+                ID = entity.ID,
+                Title = entity.Title,
+
+            };
+            return viewModel;
         }
 
-        internal static GenreViewModel Map(GenreEntity item)
+        public static List<GenreViewModel> Map(List<GenreEntity> entities)
         {
-            throw new NotImplementedException();
+            var viewModels = entities.Select(x => Map(x)).ToList();
+            return viewModels;
         }
+
     }
 }

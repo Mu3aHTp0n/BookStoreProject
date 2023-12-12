@@ -9,14 +9,23 @@ namespace BookStoreProject.Infrastructure.Mappers
 {
     public class AuthorMapper
     {
-        public static List<AuthorViewModel> Map(List<AuthorEntity> items)
+        public static AuthorViewModel Map(AuthorEntity entity)
         {
-            throw new NotImplementedException();
+            var viewModel = new AuthorViewModel
+            {
+                ID = entity.ID,
+                SurName = entity.SurName,
+                Name = entity.Name,
+                SecondName = entity.SecondName,
+            };
+            return viewModel;
         }
 
-        public static AuthorViewModel Map(AuthorEntity item)
+        public static List<AuthorViewModel> Map(List<AuthorEntity> entities)
         {
-            throw new NotImplementedException();
+            var viewModels = entities.Select(x => Map(x)).ToList();
+            return viewModels;
         }
+
     }
 }

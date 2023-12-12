@@ -39,7 +39,26 @@
              Margin="10 20"
              MaxHeight="100"/>
 
-
+        <DataGrid x:Name="EmployeesGrid" 
+                  Grid.Row="2" 
+                  AutoGenerateColumns="False" 
+                  CanUserReorderColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название"  
+                                    Width="*" 
+                                    Binding="{Binding AuthorId}"/>
+                <DataGridTextColumn Header="Автор"
+                                    Width="*"
+                                    Binding="{Binding GenreId}"/>
+                <!--<DataGridTextColumn Header="Стоимость"
+                                    Width="*"
+                                    Binding="{Binding Count}"/>-->
+                <!--<DataGridTextColumn Header="Издательство"
+                                    Width="*"
+                                    Binding="{Binding Publisher_ID}"/>-->
+            </DataGrid.Columns>
+        </DataGrid>
+        
         <Grid Grid.RowSpan="3" Grid.Row="2"
          Grid.Column="1">
             <Grid.RowDefinitions>

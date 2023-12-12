@@ -9,14 +9,22 @@ namespace BookStoreProject.Infrastructure.Mappers
 {
     public class DiscountMapper
     {
-        internal static List<DiscountViewModel> Map(List<DiscountEntity> items)
+        public static DiscountViewModel Map(DiscountEntity entity)
         {
-            throw new NotImplementedException();
+            var viewModel = new DiscountViewModel
+            {
+                ID = entity.ID,
+                Title = entity.Title,
+                Value = entity.Value,
+            };
+            return viewModel;
         }
 
-        internal static DiscountViewModel Map(DiscountEntity item)
+        public static List<DiscountViewModel> Map(List<DiscountEntity> entities)
         {
-            throw new NotImplementedException();
+            var viewModels = entities.Select(x => Map(x)).ToList();
+            return viewModels;
         }
+
     }
 }

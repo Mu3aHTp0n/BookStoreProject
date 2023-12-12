@@ -9,14 +9,20 @@ namespace BookStoreProject.Infrastructure.Mappers
 {
     public class RoleMapper
     {
-        internal static List<RoleViewModel> Map(List<RoleEntity> items)
+        public static RoleViewModel Map(RoleEntity entity)
         {
-            throw new NotImplementedException();
+            var viewModel = new RoleViewModel
+            {
+                ID = entity.ID,
+                Name = entity.Name,
+            };
+            return viewModel;
         }
 
-        internal static RoleViewModel Map(RoleEntity item)
+        public static List<RoleViewModel> Map(List<RoleEntity> entities)
         {
-            throw new NotImplementedException();
+            var viewModels = entities.Select(x => Map(x)).ToList();
+            return viewModels;
         }
     }
 }
