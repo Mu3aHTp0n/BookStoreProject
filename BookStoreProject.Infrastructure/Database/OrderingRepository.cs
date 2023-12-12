@@ -14,7 +14,7 @@ namespace BookStoreProject.Infrastructure.Database
         {
             using (var context = new Context())
             {
-                var items = context.Ordering.ToList();
+                var items = context.Orderings.ToList();
                 return OrderingMapper.Map(items);
             }
         }
@@ -22,7 +22,7 @@ namespace BookStoreProject.Infrastructure.Database
         {
             using (var context = new Context())
             {
-                var item = context.Ordering.FirstOrDefault(x => x.ID == id);
+                var item = context.Orderings.FirstOrDefault(x => x.ID == id);
                 return OrderingMapper.Map(item);
             }
         }

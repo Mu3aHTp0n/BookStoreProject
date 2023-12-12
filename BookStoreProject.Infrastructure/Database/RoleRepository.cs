@@ -14,7 +14,7 @@ namespace BookStoreProject.Infrastructure.Database
         {
             using (var context = new Context())
             {
-                var items = context.Role.ToList();
+                var items = context.Roles.ToList();
                 return RoleMapper.Map(items);
             }
         }
@@ -22,7 +22,7 @@ namespace BookStoreProject.Infrastructure.Database
         {
             using (var context = new Context())
             {
-                var item = context.Role.FirstOrDefault(x => x.ID == id);
+                var item = context.Roles.FirstOrDefault(x => x.ID == id);
                 return RoleMapper.Map(item);
             }
         }

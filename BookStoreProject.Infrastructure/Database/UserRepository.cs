@@ -14,7 +14,7 @@ namespace BookStoreProject.Infrastructure.Database
         {
             using (var context = new Context())
             {
-                var items = context.User.ToList();
+                var items = context.Users.ToList();
                 return UserMapper.Map(items);
             }
         }

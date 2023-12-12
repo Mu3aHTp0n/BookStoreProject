@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using BookStoreProject.Infrastructure;
+using BookStoreProject.Infrastructure.Database;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -21,10 +23,15 @@ namespace BookStoreProject.Pages
     /// </summary>
     public partial class EmployeesPage : Page
     {
+        private PeopleRepository _repository;
         public EmployeesPage()
         {
             InitializeComponent();
+            _repository = new PeopleRepository();
+            EmployeesGrid.ItemsSource = _repository.GetList();
+
         }
+
         private void ToMenu(object sender, RoutedEventArgs e)
         {
             MenuPage menuPage = new MenuPage();
@@ -32,5 +39,6 @@ namespace BookStoreProject.Pages
             mainWindow.Title = menuPage.Title;
             mainWindow.MainFrame.Navigate(menuPage);
         }
+
     }
 }

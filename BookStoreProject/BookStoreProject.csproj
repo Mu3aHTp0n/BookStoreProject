@@ -165,7 +165,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BookStoreProject.Infrastructure\BookStoreProject.Infrastructure.csproj">
+      <Project>{33f1f1a1-cb6d-48a7-9857-0eda9e0c9e32}</Project>
+      <Name>BookStoreProject.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Windows\logo.png" />
   </ItemGroup>

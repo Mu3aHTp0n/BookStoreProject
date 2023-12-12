@@ -14,7 +14,7 @@ namespace BookStoreProject.Infrastructure.Database
         {
             using (var context = new Context())
             {
-                var items = context.People.ToList();
+                var items = context.Peoples.ToList();
                 return PeopleMapper.Map(items);
             }
         }
@@ -22,10 +22,10 @@ namespace BookStoreProject.Infrastructure.Database
         {
             using (var context = new Context())
             {
-                var item = context.People.FirstOrDefault(x => x.ID == id);
+                var item = context.Peoples.FirstOrDefault(x => x.ID == id);
                 return PeopleMapper.Map(item);
             }
         }
-
+        
     }
 }

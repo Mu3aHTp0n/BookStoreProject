@@ -27,7 +27,7 @@
             Content="Выйти" 
             Margin="20" 
             MinWidth="150" MinHeight="50"
-            Click="Button_Click_4"/>
+            Click="Exit"/>
 
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2"
                     Margin="20">

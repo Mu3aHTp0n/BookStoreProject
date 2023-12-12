@@ -12,15 +12,15 @@ namespace BookStoreProject.Infrastructure
         {
         }
 
-        public virtual DbSet<AuthorEntity> Author { get; set; }
-        public virtual DbSet<BookEntity> Book { get; set; }
-        public virtual DbSet<DiscountEntity> Discount { get; set; }
-        public virtual DbSet<GenreEntity> Genre { get; set; }
-        public virtual DbSet<OrderingEntity> Ordering { get; set; }
-        public virtual DbSet<PeopleEntity> People { get; set; }
-        public virtual DbSet<PublisherEntity> Publisher { get; set; }
-        public virtual DbSet<RoleEntity> Role { get; set; }
-        public virtual DbSet<UserEntity> User { get; set; }
+        public virtual DbSet<AuthorEntity> Authors { get; set; }
+        public virtual DbSet<BookEntity> Books { get; set; }
+        public virtual DbSet<DiscountEntity> Discounts { get; set; }
+        public virtual DbSet<GenreEntity> Genres { get; set; }
+        public virtual DbSet<OrderingEntity> Orderings { get; set; }
+        public virtual DbSet<PeopleEntity> Peoples { get; set; }
+        public virtual DbSet<PublisherEntity> Publishers { get; set; }
+        public virtual DbSet<RoleEntity> Roles { get; set; }
+        public virtual DbSet<UserEntity> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

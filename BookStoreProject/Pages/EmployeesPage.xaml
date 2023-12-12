@@ -40,7 +40,10 @@
              Margin="10 20"
              MaxHeight="100"/>
 
-        <DataGrid Grid.Row="2" AutoGenerateColumns="False" CanUserReorderColumns="False">
+        <DataGrid x:Name="EmployeesGrid" 
+                  Grid.Row="2" 
+                  AutoGenerateColumns="False" 
+                  CanUserReorderColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия"  
                                     Width="*" 
