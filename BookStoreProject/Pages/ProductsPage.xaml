@@ -46,16 +46,16 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название"  
                                     Width="*" 
-                                    Binding="{Binding AuthorId}"/>
+                                    Binding="{Binding Title}"/>
                 <DataGridTextColumn Header="Автор"
                                     Width="*"
-                                    Binding="{Binding GenreId}"/>
-                <!--<DataGridTextColumn Header="Стоимость"
+                                    Binding="{Binding AuthorId}"/>
+                <DataGridTextColumn Header="Стоимость"
                                     Width="*"
-                                    Binding="{Binding Count}"/>-->
-                <!--<DataGridTextColumn Header="Издательство"
+                                    Binding="{Binding Cost}"/>
+                <DataGridTextColumn Header="Издательство"
                                     Width="*"
-                                    Binding="{Binding Publisher_ID}"/>-->
+                                    Binding="{Binding Publisher_ID}"/>
             </DataGrid.Columns>
         </DataGrid>
         

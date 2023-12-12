@@ -47,13 +47,13 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия"  
                                     Width="*" 
-                                    Binding="{Binding SurName}"/>
+                                    Binding="{Binding SecondName}"/>
                 <DataGridTextColumn Header="Имя"
                                     Width="*"
                                     Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Отчество"
                                     Width="*"
-                                    Binding="{Binding SecondName}"/>
+                                    Binding="{Binding SurName}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Grid Grid.RowSpan="3" Grid.Row="2"

@@ -6,6 +6,7 @@ namespace BookStoreProject.Infrastructure
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    [Table("People")]
     public partial class PeopleEntity
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -34,7 +35,8 @@ namespace BookStoreProject.Infrastructure
         [Required]
         [StringLength(2147483647)]
         public string DateOfBirth { get; set; }
-
+        
+        [Column("Role_ID")]
         public long RoleId { get; set; }
 
         [StringLength(2147483647)]

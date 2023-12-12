@@ -17,10 +17,13 @@ namespace BookStoreProject.Infrastructure
 
         public long ID { get; set; }
 
+        [Column("Author_ID")]
         public long AuthorId { get; set; }
 
+        [Column("Publisher_ID")]
         public long PublisherId { get; set; }
 
+        [Column("Genre_ID")]
         public long GenreId { get; set; }
 
         [Required]
