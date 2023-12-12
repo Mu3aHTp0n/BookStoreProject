@@ -15,9 +15,18 @@ namespace BookStoreProject.Infrastructure.Mappers
             {
                 ID = entity.ID,
                 Title = entity.Title,
-
             };
             return viewModel;
+        }
+
+        public static GenreEntity Map(GenreViewModel viewModel)
+        {
+            var entity = new GenreEntity
+            {
+                ID = viewModel.ID,
+                Title = viewModel.Title,
+            };
+            return entity;
         }
 
         public static List<GenreViewModel> Map(List<GenreEntity> entities)

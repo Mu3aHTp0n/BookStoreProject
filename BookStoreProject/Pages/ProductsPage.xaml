@@ -65,7 +65,6 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Button Grid.Row="0"
              Background="#698AFF"
@@ -79,16 +78,9 @@
              Foreground="#F5F5F5"
              FontFamily="Arial"
              FontSize="24"
-             Content="Обновить" Margin="10" />
-
-            <Button Grid.Row="2"
-             Background="#698AFF"
-             Foreground="#F5F5F5"
-             FontFamily="Arial"
-             FontSize="24"
              Content="Удалить" Margin="10" />
 
-            <Button Grid.Row="3"
+            <Button Grid.Row="2"
              Background="#698AFF"
              Foreground="#F5F5F5"
              FontFamily="Arial"

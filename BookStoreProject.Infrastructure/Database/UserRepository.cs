@@ -10,6 +10,8 @@ namespace BookStoreProject.Infrastructure.Database
 {
     public class UserRepository
     {
+
+        #region Методы: получить список,
         public List<UserViewModel> GetList()
         {
             using (var context = new Context())
@@ -18,5 +20,6 @@ namespace BookStoreProject.Infrastructure.Database
                 return UserMapper.Map(items);
             }
         }
+        #endregion
     }
 }

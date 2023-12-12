@@ -22,6 +22,19 @@ namespace BookStoreProject.Infrastructure.Mappers
             return viewModel;
         }
 
+        public static OrderingEntity Map(OrderingViewModel viewModel)
+        {
+            var entity = new OrderingEntity
+            {
+                ID = viewModel.ID,
+                PeopleId = viewModel.PeopleId,
+                BookId = viewModel.BookId,
+                Count = viewModel.Count,
+                Date = viewModel.Date,
+            };
+            return entity;
+        }
+
         public static List<OrderingViewModel> Map(List<OrderingEntity> entities)
         {
             var viewModels = entities.Select(x => Map(x)).ToList();

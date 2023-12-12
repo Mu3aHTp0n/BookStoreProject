@@ -18,12 +18,33 @@ namespace BookStoreProject.Infrastructure.Mappers
             };
             return viewModel;
         }
+        public static UserEntity Map(UserViewModel viewModel)
+        {
+            var entity = new UserEntity
+            {
+                Login = viewModel.Login, 
+                Password = viewModel.Password,
+            };
+            return entity;
+        }
+
+        #region кусок кода,
+        public static UserViewModel Map(UserEntity entity)
+        {
+            var viewModel = new UserViewModel
+            {
+                Login = entity.Login,
+                Password = entity.Password,
+            };
+            return viewModel;
+        }
 
         public static List<UserViewModel> Map(List<UserEntity> entities)
         {
             var viewModels = entities.Select(x => Map(x)).ToList();
             return viewModels;
         }
+        #endregion
 
     }
 }

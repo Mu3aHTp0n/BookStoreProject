@@ -20,6 +20,17 @@ namespace BookStoreProject.Infrastructure.Mappers
             return viewModel;
         }
 
+        public static DiscountEntity Map(DiscountViewModel viewModel)
+        {
+            var entity = new DiscountEntity
+            {
+                ID = viewModel.ID,
+                Title = viewModel.Title,
+                Value = viewModel.Value,
+            };
+            return entity;
+        }
+
         public static List<DiscountViewModel> Map(List<DiscountEntity> entities)
         {
             var viewModels = entities.Select(x => Map(x)).ToList();

@@ -13,6 +13,26 @@ namespace BookStoreProject.Infrastructure.Mappers
         {
             var viewModel = new RoleViewModel
             {
+                ID = entity.ID, 
+                Name = entity.Name,
+            };
+            return viewModel;
+        }
+        public static RoleEntity Map(UserViewModel viewModel)
+        {
+            var entity = new RoleEntity
+            {
+                ID = viewModel.ID,
+                Name = viewModel.Name,
+            };
+            return entity;
+        }
+
+        #region кусок кода,
+        public static RoleViewModel Map(RoleEntity entity)
+        {
+            var viewModel = new RoleViewModel
+            {
                 ID = entity.ID,
                 Name = entity.Name,
             };
@@ -24,5 +44,6 @@ namespace BookStoreProject.Infrastructure.Mappers
             var viewModels = entities.Select(x => Map(x)).ToList();
             return viewModels;
         }
+        #endregion 
     }
 }

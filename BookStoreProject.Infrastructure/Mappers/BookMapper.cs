@@ -24,6 +24,21 @@ namespace BookStoreProject.Infrastructure.Mappers
             return viewModel;
         }
 
+        public static BookEntity Map(BookViewModel viewModel)
+        {
+            var entity = new BookEntity
+            {
+                ID = viewModel.ID,
+                AuthorId = viewModel.AuthorId,
+                PublisherId = viewModel.PublisherId,
+                GenreId = viewModel.GenreId,
+                Title = viewModel.Title,
+                Cost = viewModel.Cost,
+                Quantity = viewModel.Quantity,
+            };
+            return entity;
+        }
+
         public static List<BookViewModel> Map(List<BookEntity> entities)
         {
             var viewModels = entities.Select(x => Map(x)).ToList();

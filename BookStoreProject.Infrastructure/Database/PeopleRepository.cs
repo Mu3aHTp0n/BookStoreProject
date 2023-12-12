@@ -10,6 +10,8 @@ namespace BookStoreProject.Infrastructure.Database
 {
     public class PeopleRepository
     {
+
+        #region Методы: получить по ID, получить список
         public List<PeopleViewModel> GetList()
         {
             using (var context = new Context())
@@ -26,6 +28,6 @@ namespace BookStoreProject.Infrastructure.Database
                 return PeopleMapper.Map(item);
             }
         }
-        
+        #endregion
     }
 }
