@@ -59,7 +59,7 @@ namespace BookStoreProject.Infrastructure
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<RoleEntity>()
-                .HasMany(e => e.People)
+                .HasMany(e => e.User)
                 .WithRequired(e => e.Role)
                 .HasForeignKey(e => e.RoleId)
                 .WillCascadeOnDelete(false);

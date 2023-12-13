@@ -27,7 +27,7 @@ namespace BookStoreProject.Pages
         {
             InitializeComponent();
             _repository = new BookRepository();
-            EmployeesGrid.ItemsSource = _repository.GetList();
+            ProductsGrid.ItemsSource = _repository.GetList();
         }
         private void ToMenu(object sender, RoutedEventArgs e)
         {

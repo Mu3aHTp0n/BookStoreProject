@@ -9,15 +9,6 @@ namespace BookStoreProject.Infrastructure.Mappers
 {
     public class PublisherMapper
     {
-        public static PublisherViewModel Map(PublisherEntity entity)
-        {
-            var viewModel = new PublisherViewModel
-            {
-                ID = entity.ID,
-                Title = entity.Title,
-            };
-            return viewModel;
-        }
         public static PublisherEntity Map(PublisherViewModel viewModel)
         {
             var entity = new PublisherEntity

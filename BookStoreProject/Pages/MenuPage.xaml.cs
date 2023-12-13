@@ -1,4 +1,5 @@
-﻿using BookStoreProject.Windows;
+﻿using BookStoreProject.Infrastructure.Consts;
+using BookStoreProject.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,13 +60,21 @@ namespace BookStoreProject.Pages
             mainWindow.Title = examplePage.Title;
             mainWindow.MainFrame.Navigate(examplePage);
         }
+        #endregion
+
+        // Выход из сеанса (убрать ключи)
         private void Exit(object sender, RoutedEventArgs e)
         {
             AuthWindow authWindow = new AuthWindow();
             authWindow.Show();
         }
-        #endregion
 
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            // !!! Допилить вывод имени и роли юзера
+            userName.Text = $"Пользователь: {Application.Current.Resources[UserInfoConsts.Username].ToString()}";
+            userRole.Text = $"Роль: {Application.Current.Resources[UserInfoConsts.RoleName].ToString()}";
+        }
     }
 }

@@ -10,5 +10,8 @@ namespace BookStoreProject.Infrastructure.Database
     {
         TEntity GetById(long id);
         List<TEntity> GetList();
+        TEntity Update(TEntity entity);
+        TEntity Delete(long id);
+        TEntity Add(TEntity entity);
     }
 }

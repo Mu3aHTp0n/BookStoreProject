@@ -27,38 +27,51 @@
                 BorderBrush="#698AFF"
                 Background="#698AFF"
                 Foreground="#F5F5F5"
-                FontSize="20"/>
+                FontSize="20" 
+                Click="GuestEnter"/>
         <StackPanel Orientation="Horizontal" 
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Width="350" Height="162">
-            <StackPanel>
+                    VerticalAlignment="Center">
+            <Grid MinWidth="300" MinHeight="135">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1.5*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+
+
                 <Label Content="Логин" 
                        Foreground="#698AFF"
-                       FontSize="20"/>
+                       FontSize="20"
+                       Grid.Row="0" Grid.Column="0" 
+                       HorizontalAlignment="Right" VerticalAlignment="Center"/>
                 <Label Content="Пароль" 
                        Foreground="#698AFF"
-                       FontSize="20"/>
-                <Label Content=""/>
-            </StackPanel>
-            <StackPanel Width="190">
-                <TextBox Width="auto" 
-                         Margin="0 6 0 10"
+                       FontSize="20"
+                       Grid.Row="1" Grid.Column="0"
+                       HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBox x:Name="loginField" 
                          BorderBrush="#698AFF"
                          BorderThickness="2"
-                         Height="30"/>
-                <PasswordBox Width="auto" 
-                             Margin="0 0 0 15"
+                         Margin="2 8"
+                         Grid.Row="0" Grid.Column="1"/>
+                <PasswordBox x:Name="passwordField" 
                              BorderBrush="#698AFF"
                              BorderThickness="2"
-                             Height="30"/>
+                             Margin="2 8"
+                             Grid.Row="1" Grid.Column="1"/>
                 <Button Content="Войти"
                         Click="Autentificate"
                         BorderBrush="#698AFF"
                         Background="#698AFF"
                         Foreground="#F5F5F5"
-                        FontSize="20"/>
-            </StackPanel>
+                        FontSize="20" 
+                        Grid.Row="2" Grid.Column="1"/>
+            </Grid>
         </StackPanel>
     </Grid>
 </Window>

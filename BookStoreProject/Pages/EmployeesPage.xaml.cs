@@ -8,13 +8,14 @@ using System.Windows;
 using System.Windows.Controls;
 using BookStoreProject.Infrastructure;
 using BookStoreProject.Infrastructure.Database;
+using BookStoreProject.Infrastructure.ViewModels;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Shapes;                                                                                                                                                                                          
 
 namespace BookStoreProject.Pages
 {
@@ -39,5 +40,41 @@ namespace BookStoreProject.Pages
             mainWindow.MainFrame.Navigate(menuPage);
         }
 
+        private void UpdateGrid()
+        {
+            EmployeesGrid.ItemsSource = _repository.GetList();
+        }
+
+        private void MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (EmployeesGrid.SelectedItem == null)
+                return;
+            var employeeCard = new AddEmployeeCardWindow(EmployeesGrid.SelectedItem as PeopleViewModel);
+            employeeCard.ShowDialog();
+            UpdateGrid();
+        }
+
+        private void AddEmployee(object sender, RoutedEventArgs e)
+        {
+            //if (EmployeesGrid.SelectedItem == null)
+            //    return;
+            //var employeeCard = new AddEmployeeCardWindow();
+            //employeeCard.ShowDialog();
+            //UpdateGrid();
+        }
+
+        private void DeleteEmployee(object sender, RoutedEventArgs e)
+        {
+            //if (EmployeesGrid.SelectedItem == null)
+            //    // Bывод модального окна с информацией о том, что ничего не выбрано для удаления
+            //    MessageBox.Show("Не выбран сотрудник для удаления");
+            //    var item = EmployeesGrid.SelectedItem as PeopleViewModel;
+
+            //if (item == null)
+            //    // Вывод модального окна, что не удалось получить данные
+            //    MessageBox.Show("Не удалось получить данные");
+            //    _repository.Delete(item.ID);
+            //UpdateGrid();
+        }
     }
-}
+}  

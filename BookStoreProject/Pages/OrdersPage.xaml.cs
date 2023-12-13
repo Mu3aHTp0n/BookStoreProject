@@ -1,4 +1,5 @@
-﻿using BookStoreProject.Windows;
+﻿using BookStoreProject.Infrastructure.Database;
+using BookStoreProject.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,12 @@ namespace BookStoreProject.Pages
     /// </summary>
     public partial class OrdersPage : Page
     {
+        private RoleRepository _repository;
         public OrdersPage()
         {
             InitializeComponent();
+            _repository = new RoleRepository();
+            OrdersGrid.ItemsSource = _repository.GetList();
         }
         private void ToMenu(object sender, RoutedEventArgs e)
         {

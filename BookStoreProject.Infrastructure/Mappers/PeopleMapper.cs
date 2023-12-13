@@ -19,7 +19,6 @@ namespace BookStoreProject.Infrastructure.Mappers
                 SurName = viewModel.SurName,
                 Sex = viewModel.Sex,
                 DateOfBirth = viewModel.DateOfBirth,
-                RoleId = viewModel.RoleId,
                 UserLogin = viewModel.UserLogin,
             };
             return entity;
@@ -35,7 +34,6 @@ namespace BookStoreProject.Infrastructure.Mappers
                 SurName = entity.SurName,
                 Sex = entity.Sex,
                 DateOfBirth = entity.DateOfBirth,
-                RoleId = entity.RoleId,
                 UserLogin = entity.UserLogin,
             };
             return viewModel;

@@ -12,14 +12,14 @@ namespace BookStoreProject.Infrastructure
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public RoleEntity()
         {
-            People = new HashSet<PeopleEntity>();
+            User = new HashSet<UserEntity>();
         }
 
         public long ID { get; set; }
 
-        public long Name { get; set; }
+        public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PeopleEntity> People { get; set; }
+        public virtual ICollection<UserEntity> User { get; set; }
     }
 }

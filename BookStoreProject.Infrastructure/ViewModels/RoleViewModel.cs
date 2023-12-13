@@ -10,6 +10,7 @@ namespace BookStoreProject.Infrastructure.ViewModels
     {
         public long ID { get; set; }
 
-        public long Name { get; set; }
+        public string Name { get; set; }
+
     }
 }

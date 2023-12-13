@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:BookStoreProject.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MenuPage">
+      Title="MenuPage"
+      Loaded="Page_Loaded">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -32,11 +33,11 @@
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2"
                     Margin="20">
             <TextBlock x:Name="userName"
-                       Text="Пользователь:" 
+                       Text="" 
                        FontFamily="Arial" FontSize="16" 
                        Foreground="#FF698AFF"/>
             <TextBlock x:Name="userRole"
-                       Text="Роль:" 
+                       Text="" 
                        FontFamily="Arial" FontSize="16" 
                        Foreground="#FF698AFF"/>
         </StackPanel>

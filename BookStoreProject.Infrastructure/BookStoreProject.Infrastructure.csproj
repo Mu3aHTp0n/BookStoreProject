@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Author.cs" />
     <Compile Include="Book.cs" />
+    <Compile Include="Consts\UserInfoConsts.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="Database\AuthorRepository.cs" />
     <Compile Include="Database\BookRepository.cs" />

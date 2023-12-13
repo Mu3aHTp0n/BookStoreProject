@@ -39,8 +39,9 @@
              Margin="10 20"
              MaxHeight="100"/>
 
-        <DataGrid x:Name="EmployeesGrid" 
+        <DataGrid x:Name="ProductsGrid" 
                   Grid.Row="2" 
+                  IsReadOnly="True"
                   AutoGenerateColumns="False" 
                   CanUserReorderColumns="False">
             <DataGrid.Columns>

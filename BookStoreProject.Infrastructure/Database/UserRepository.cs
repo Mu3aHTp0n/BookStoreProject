@@ -10,6 +10,17 @@ namespace BookStoreProject.Infrastructure.Database
 {
     public class UserRepository
     {
+        public UserEntity Login(string login, string password)
+        {
+            if (login == null || password == null) return null;
+            using (var context = new Context())
+            {
+                var item = context.Users
+                    //.Include(x => x.Role)
+                    .FirstOrDefault(x => x.Login == login && x.Password == password);
+                return item;
+            }
+        }
 
         #region Методы: получить список,
         public List<UserViewModel> GetList()

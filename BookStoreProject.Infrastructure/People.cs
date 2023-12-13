@@ -36,8 +36,6 @@ namespace BookStoreProject.Infrastructure
         [StringLength(2147483647)]
         public string DateOfBirth { get; set; }
         
-        [Column("Role_ID")]
-        public long RoleId { get; set; }
 
         [StringLength(2147483647)]
         public string UserLogin { get; set; }
@@ -45,6 +43,5 @@ namespace BookStoreProject.Infrastructure
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderingEntity> Ordering { get; set; }
 
-        public virtual RoleEntity Role { get; set; }
     }
 }

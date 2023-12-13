@@ -39,6 +39,23 @@
              Margin="10 20"
              MaxHeight="100"/>
 
+        <DataGrid x:Name="OrdersGrid" 
+                  Grid.Row="2" 
+                  IsReadOnly="True"
+                  AutoGenerateColumns="False" 
+                  CanUserReorderColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия"  
+                                    Width="*" 
+                                    Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Имя"
+                                    Width="*"
+                                    Binding="{Binding Name}"/>
+                <!--<DataGridTextColumn Header="Отчество"
+                                    Width="*"
+                                    Binding="{Binding SurName}"/>-->
+            </DataGrid.Columns>
+        </DataGrid>
 
         <Grid Grid.RowSpan="3" Grid.Row="2"
          Grid.Column="1">

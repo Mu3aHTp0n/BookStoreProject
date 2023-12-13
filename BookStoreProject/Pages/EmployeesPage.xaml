@@ -24,7 +24,7 @@
            Foreground="#F5F5F5"
            FontFamily="Arial"
            FontSize="20"
-           MaxHeight="150" 
+           MaxHeight="200" 
            Content="В меню" Margin="10" 
            Click="ToMenu"/>
 
@@ -34,16 +34,18 @@
              FontFamily="Arial"
              FontSize="20"
              Content="Найти" 
-             MaxHeight="100"
+             MaxHeight="200"
              Margin="10 20"/>
         <TextBox Grid.Row="1" Grid.Column="0"
              Margin="10 20"
-             MaxHeight="100"/>
+             MaxHeight="30"/>
 
         <DataGrid x:Name="EmployeesGrid" 
                   Grid.Row="2" 
+                  IsReadOnly="True"
                   AutoGenerateColumns="False" 
-                  CanUserReorderColumns="False">
+                  CanUserReorderColumns="False" 
+                  MouseDoubleClick="MouseDoubleClick">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия"  
                                     Width="*" 
@@ -69,7 +71,7 @@
              Foreground="#F5F5F5"
              FontFamily="Arial"
              FontSize="24"
-             Content="Добавить" Margin="10" />
+             Content="Добавить" Margin="10" Click="AddEmployee"/>
 
             <Button Grid.Row="1"
              Background="#698AFF"
@@ -83,7 +85,7 @@
              Foreground="#F5F5F5"
              FontFamily="Arial"
              FontSize="24"
-             Content="Удалить" Margin="10" />
+             Content="Удалить" Margin="10" Click="DeleteEmployee" />
 
             <Button Grid.Row="3"
              Background="#698AFF"

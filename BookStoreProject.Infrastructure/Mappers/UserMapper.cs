@@ -9,21 +9,13 @@ namespace BookStoreProject.Infrastructure.Mappers
 {
     public class UserMapper
     {
-        public static UserViewModel Map(UserEntity entity)
-        {
-            var viewModel = new UserViewModel
-            {
-                Login = entity.Login,
-                Password = entity.Password,
-            };
-            return viewModel;
-        }
         public static UserEntity Map(UserViewModel viewModel)
         {
             var entity = new UserEntity
             {
                 Login = viewModel.Login, 
                 Password = viewModel.Password,
+                RoleId = viewModel.RoleId,
             };
             return entity;
         }
@@ -35,6 +27,7 @@ namespace BookStoreProject.Infrastructure.Mappers
             {
                 Login = entity.Login,
                 Password = entity.Password,
+                RoleId = entity.RoleId,
             };
             return viewModel;
         }
