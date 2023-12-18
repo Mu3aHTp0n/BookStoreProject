@@ -13,5 +13,7 @@ namespace BookStoreProject.Infrastructure.ViewModels
         public string Password { get; set; }
 
         public long RoleId { get; set; }
+
+        public RoleViewModel Role { get; set; }
     }
 }

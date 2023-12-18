@@ -35,17 +35,18 @@
              FontSize="20"
              Content="Найти" 
              MaxHeight="200"
-             Margin="10 20"/>
+             Margin="10 20" Click="Search"/>
         <TextBox Grid.Row="1" Grid.Column="0"
              Margin="10 20"
-             MaxHeight="30"/>
+             MaxHeight="30"
+             x:Name="find"/>
 
         <DataGrid x:Name="EmployeesGrid" 
                   Grid.Row="2" 
                   IsReadOnly="True"
                   AutoGenerateColumns="False" 
-                  CanUserReorderColumns="False" 
-                  MouseDoubleClick="MouseDoubleClick">
+                  CanUserReorderColumns="False"
+                  CanUserAddRows="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия"  
                                     Width="*" 
@@ -78,7 +79,7 @@
              Foreground="#F5F5F5"
              FontFamily="Arial"
              FontSize="24"
-             Content="Обновить" Margin="10" />
+             Content="Обновить" Margin="10" Click="F5"/>
 
             <Button Grid.Row="2"
              Background="#698AFF"

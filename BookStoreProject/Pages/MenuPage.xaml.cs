@@ -1,4 +1,6 @@
-﻿using BookStoreProject.Infrastructure.Consts;
+﻿using BookStoreProject.Infrastructure;
+using BookStoreProject.Infrastructure.Consts;
+using BookStoreProject.Infrastructure.Database;
 using BookStoreProject.Windows;
 using System;
 using System.Collections.Generic;
@@ -22,9 +24,11 @@ namespace BookStoreProject.Pages
     /// </summary>
     public partial class MenuPage : Page
     {
+        private UserRepository _userRepository;
         public MenuPage()
         {
             InitializeComponent();
+            _userRepository = new UserRepository();
         }
 
         #region Navigation
@@ -62,19 +66,24 @@ namespace BookStoreProject.Pages
         }
         #endregion
 
-        // Выход из сеанса (убрать ключи)
+        // Выход из сеанса
         private void Exit(object sender, RoutedEventArgs e)
         {
             AuthWindow authWindow = new AuthWindow();
             authWindow.Show();
+            Application.Current.Resources[UserInfoConsts.RoleId] = null;
+            Application.Current.Resources[UserInfoConsts.RoleName] = null;
+            Application.Current.Resources[UserInfoConsts.Username] = null;
+            Window.GetWindow(this).Close();
         }
 
 
+        // Вывод имени и роли юзера
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            // !!! Допилить вывод имени и роли юзера
             userName.Text = $"Пользователь: {Application.Current.Resources[UserInfoConsts.Username].ToString()}";
             userRole.Text = $"Роль: {Application.Current.Resources[UserInfoConsts.RoleName].ToString()}";
         }
+        
     }
 }

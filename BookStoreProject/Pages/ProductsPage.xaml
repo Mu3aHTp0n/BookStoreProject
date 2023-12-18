@@ -43,7 +43,8 @@
                   Grid.Row="2" 
                   IsReadOnly="True"
                   AutoGenerateColumns="False" 
-                  CanUserReorderColumns="False">
+                  CanUserReorderColumns="False"
+                  CanUserAddRows="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название"  
                                     Width="*" 
@@ -56,7 +57,7 @@
                                     Binding="{Binding Cost}"/>
                 <DataGridTextColumn Header="Издательство"
                                     Width="*"
-                                    Binding="{Binding Publisher_ID}"/>
+                                    Binding="{Binding PublisherId}"/>
             </DataGrid.Columns>
         </DataGrid>
         

@@ -44,15 +44,15 @@ namespace BookStoreProject.Windows
 
             var context = new Context { };
 
-            var client = context.Users.FirstOrDefault(x => x.Login == login && x.Password == password && x.RoleId == 1);
-            var employee = context.Users.FirstOrDefault(x => x.Login == login && x.Password == password && x.RoleId == 2);
-            var admin = context.Users.FirstOrDefault(x => x.Login == login && x.Password == password && x.RoleId == 3);
+            UserEntity client = context.Users.FirstOrDefault(x => x.Login == login && x.Password == password && x.RoleId == 1);
+            UserEntity employee = context.Users.FirstOrDefault(x => x.Login == login && x.Password == password && x.RoleId == 2);
+            UserEntity admin = context.Users.FirstOrDefault(x => x.Login == login && x.Password == password && x.RoleId == 3);
 
             if ( client != null )
             {
                 Application.Current.Resources[UserInfoConsts.RoleId] = "1";
                 Application.Current.Resources[UserInfoConsts.RoleName] = "Клиент";
-                Application.Current.Resources[UserInfoConsts.Username] = $" {login}";
+                Application.Current.Resources[UserInfoConsts.Username] = $"{login}";
             }
             else if ( employee != null )
             {

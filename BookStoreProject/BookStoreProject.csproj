@@ -103,7 +103,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\AddEmployeeCardWindow.xaml">
+    <Page Include="Windows\AddPeopleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,8 +134,8 @@
     <Compile Include="Pages\ProductsPage.xaml.cs">
       <DependentUpon>ProductsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\AddEmployeeCardWindow.xaml.cs">
-      <DependentUpon>AddEmployeeCardWindow.xaml</DependentUpon>
+    <Compile Include="Windows\AddPeopleWindow.xaml.cs">
+      <DependentUpon>AddPeopleWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\AuthWindow.xaml.cs">
       <DependentUpon>AuthWindow.xaml</DependentUpon>

@@ -26,9 +26,12 @@ namespace BookStoreProject.Pages
         public ProductsPage()
         {
             InitializeComponent();
+            // Источник данных для таблицы с книгами
             _repository = new BookRepository();
             ProductsGrid.ItemsSource = _repository.GetList();
         }
+
+        // Вернуться на главную страницу
         private void ToMenu(object sender, RoutedEventArgs e)
         {
             MenuPage menuPage = new MenuPage();

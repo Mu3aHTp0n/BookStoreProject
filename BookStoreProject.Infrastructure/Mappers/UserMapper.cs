@@ -20,7 +20,6 @@ namespace BookStoreProject.Infrastructure.Mappers
             return entity;
         }
 
-        #region кусок кода,
         public static UserViewModel Map(UserEntity entity)
         {
             var viewModel = new UserViewModel
@@ -32,12 +31,17 @@ namespace BookStoreProject.Infrastructure.Mappers
             return viewModel;
         }
 
+        public static List<UserEntity> Map(List<UserViewModel> viewModels)
+        {
+            var entities = viewModels.Select(vm => Map(vm)).ToList();
+            return entities;
+        }
+
         public static List<UserViewModel> Map(List<UserEntity> entities)
         {
             var viewModels = entities.Select(x => Map(x)).ToList();
             return viewModels;
         }
-        #endregion
 
     }
 }

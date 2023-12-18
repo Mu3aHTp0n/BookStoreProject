@@ -1,4 +1,9 @@
-﻿using BookStoreProject.Windows;
+﻿using BookStoreProject.Infrastructure;
+using BookStoreProject.Infrastructure.Consts;
+using BookStoreProject.Infrastructure.Database;
+using BookStoreProject.Infrastructure.Mappers;
+using BookStoreProject.Infrastructure.ViewModels;
+using BookStoreProject.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +26,13 @@ namespace BookStoreProject.Pages
     /// </summary>
     public partial class ClientsPage : Page
     {
+        private PeopleRepository _repository;
+        private UserViewModel _viewModel;
         public ClientsPage()
         {
             InitializeComponent();
+            _repository = new PeopleRepository();
+            ClientsGrid.ItemsSource = _repository.GetList();
         }
         private void ToMenu(object sender, RoutedEventArgs e)
         {
@@ -31,6 +40,54 @@ namespace BookStoreProject.Pages
             MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
             mainWindow.Title = menuPage.Title;
             mainWindow.MainFrame.Navigate(menuPage);
+        }
+        private void UpdateGrid()
+        {
+            ClientsGrid.ItemsSource = _repository.GetList();
+        }
+
+        private void F5(object sender, RoutedEventArgs e)
+        {
+            UpdateGrid();
+        }
+
+        private void AddPeoples(object sender, RoutedEventArgs e)
+        {
+            AddPeopleWindow addPeopleWindow = new AddPeopleWindow();
+            addPeopleWindow.Show();
+            Window.GetWindow(this).Close();
+        }
+
+        private void DeletePeople(object sender, RoutedEventArgs e)
+        {
+            if (ClientsGrid.SelectedItem == null)
+            {
+                MessageBox.Show("Ничего не выбрано для удаления");
+                return;
+            }
+
+            var item = ClientsGrid.SelectedItem as PeopleViewModel;
+            if (item == null)
+            {
+                MessageBox.Show("Не удалось получить данные");
+                return;
+            }
+            _repository.Delete(item.ID);
+            UpdateGrid();
+        }
+
+        private void Search(object sender, RoutedEventArgs e)
+        {
+            string search = find.Text;
+            if (string.IsNullOrEmpty(search))
+            {
+                ClientsGrid.ItemsSource = _repository.GetList();
+            }
+            else
+            {
+                List<PeopleViewModel> result = _repository.Search(search);
+                ClientsGrid.ItemsSource = result;
+            }
         }
     }
 }

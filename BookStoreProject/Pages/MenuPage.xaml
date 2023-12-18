@@ -52,7 +52,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button
+            <Button x:Name="clientsPage"
              Margin = "15"
              Background="#698AFF"
              Foreground="#F5F5F5"
@@ -60,7 +60,8 @@
              FontSize="20"
              MinHeight="75"
              Content="Клиенты" Click="ToClient"/>
-            <Button Grid.Row="0" Grid.Column="1"
+            <Button x:Name="employeesPage" 
+             Grid.Row="0" Grid.Column="1"
              Margin = "15"
              Background="#698AFF" 
              Foreground="#F5F5F5"
@@ -68,7 +69,8 @@
              FontSize="20"
              MinHeight="75" 
              Content="Сотрудники" Click="ToEmployees"/>
-            <Button Grid.Row="1" Grid.Column="0"
+            <Button x:Name="ordersPage"
+             Grid.Row="1" Grid.Column="0"
              Margin = "15"
              Background="#698AFF" 
              Foreground="#F5F5F5"

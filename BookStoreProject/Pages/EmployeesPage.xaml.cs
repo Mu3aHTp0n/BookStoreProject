@@ -25,6 +25,7 @@ namespace BookStoreProject.Pages
     public partial class EmployeesPage : Page
     {
         private PeopleRepository _repository;
+        private UserRepository _rep;
         public EmployeesPage()
         {
             InitializeComponent();
@@ -45,36 +46,48 @@ namespace BookStoreProject.Pages
             EmployeesGrid.ItemsSource = _repository.GetList();
         }
 
-        private void MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            if (EmployeesGrid.SelectedItem == null)
-                return;
-            var employeeCard = new AddEmployeeCardWindow(EmployeesGrid.SelectedItem as PeopleViewModel);
-            employeeCard.ShowDialog();
-            UpdateGrid();
-        }
-
         private void AddEmployee(object sender, RoutedEventArgs e)
         {
-            //if (EmployeesGrid.SelectedItem == null)
-            //    return;
-            //var employeeCard = new AddEmployeeCardWindow();
-            //employeeCard.ShowDialog();
-            //UpdateGrid();
+            AddPeopleWindow addPeopleWindow = new AddPeopleWindow();
+            addPeopleWindow.Show();
+            Window.GetWindow(this).Close();
         }
 
         private void DeleteEmployee(object sender, RoutedEventArgs e)
         {
-            //if (EmployeesGrid.SelectedItem == null)
-            //    // Bывод модального окна с информацией о том, что ничего не выбрано для удаления
-            //    MessageBox.Show("Не выбран сотрудник для удаления");
-            //    var item = EmployeesGrid.SelectedItem as PeopleViewModel;
+            if (EmployeesGrid.SelectedItem == null)
+            {
+                MessageBox.Show("Ничего не выбрано для удаления");
+                return;
+            }
 
-            //if (item == null)
-            //    // Вывод модального окна, что не удалось получить данные
-            //    MessageBox.Show("Не удалось получить данные");
-            //    _repository.Delete(item.ID);
-            //UpdateGrid();
+            var item = EmployeesGrid.SelectedItem as PeopleViewModel;
+            if (item == null)
+            {
+                MessageBox.Show("Не удалось получить данные");
+                return;
+            }
+            _repository.Delete(item.ID);
+            UpdateGrid();
+        }
+
+        private void F5(object sender, RoutedEventArgs e)
+        {
+            UpdateGrid();
+        }
+
+        private void Search(object sender, RoutedEventArgs e)
+        {
+            string search = find.Text;
+            if (string.IsNullOrEmpty(search))
+            {
+                EmployeesGrid.ItemsSource = _repository.GetList();
+            }
+            else
+            {
+                List<PeopleViewModel> result = _repository.Search(search);
+                EmployeesGrid.ItemsSource = result;
+            }
         }
     }
 }  

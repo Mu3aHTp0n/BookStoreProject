@@ -1,0 +1,81 @@
+﻿<Window x:Class="BookStoreProject.Windows.AddPeopleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStoreProject.Windows"
+        mc:Ignorable="d"
+        Title="Добавить человека" 
+        MinHeight="620" MinWidth="350"
+        Height="700" Width="400"
+        MaxHeight="800" MaxWidth="500">
+    <Grid>
+        <Button Content="Выйти"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="0 10 20 0"
+                Click="Exit"/>
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Label Content="Фамилия"
+                   FontSize="14"
+                   FontFamily="Arial"
+                   Foreground="#FF698AFF"/>
+            <TextBox x:Name="secondName__Field" Width="300"
+                     Margin="0 0 0 20"/>
+            <Label Content="Имя"
+                   FontSize="14"
+                   FontFamily="Arial"
+                   Foreground="#FF698AFF"/>
+            <TextBox x:Name="name__Field"
+                     Margin="0 0 0 20"/>
+            <Label Content="Отчество"
+                   FontSize="14"
+                   FontFamily="Arial"
+                   Foreground="#FF698AFF"/>
+            <TextBox x:Name="surName__Field"
+                     Margin="0 0 0 20"/>
+            <Label Content="Пол"
+                   FontSize="14"
+                   FontFamily="Arial"
+                   Foreground="#FF698AFF"/>
+            <TextBox x:Name="sex__Field"
+                     Margin="0 0 0 20"/>
+            <Label Content="Дата рождения"
+                   FontSize="14"
+                   FontFamily="Arial"
+                   Foreground="#FF698AFF"/>
+            <TextBox x:Name="dateOfBirth__Field"
+                     Margin="0 0 0 20"/>
+            <Label Content="Логин"
+                   FontSize="14"
+                   FontFamily="Arial"
+                   Foreground="#FF698AFF"/>
+            <TextBox x:Name="userLogin__Field"
+                     Margin="0 0 0 20"/>
+            <Label Content="Пароль"
+                   FontSize="14"
+                   FontFamily="Arial"
+                   Foreground="#FF698AFF"/>
+            <PasswordBox x:Name="password__Field"
+                     Margin="0 0 0 20"/>
+            <Label Content="Роль"
+                   FontSize="14"
+                   FontFamily="Arial"
+                   Foreground="#FF698AFF"/>
+            <ComboBox Margin="0 0 0 15"
+                      x:Name="roleList">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Content="Зарегистрировать"
+                    Click="AddPeoples"/>
+        </StackPanel>
+    </Grid>
+</Window>
