@@ -43,8 +43,8 @@ namespace BookStoreProject.Infrastructure
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<OrderingEntity>()
-                .Property(e => e.Date)
-                .HasPrecision(53, 0);
+                .Property(e => e.Date);
+                //.HasPrecision(53, 0);
 
             modelBuilder.Entity<PeopleEntity>()
                 .HasMany(e => e.Ordering)

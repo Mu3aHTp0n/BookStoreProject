@@ -18,6 +18,8 @@ namespace BookStoreProject.Infrastructure.Mappers
                 BookId = entity.BookId,
                 Count = entity.Count,
                 Date = entity.Date,
+                People = PeopleMapper.Map(entity.People),
+                Book = BookMapper.Map(entity.Book),
             };
             return viewModel;
         }
@@ -31,6 +33,8 @@ namespace BookStoreProject.Infrastructure.Mappers
                 BookId = viewModel.BookId,
                 Count = viewModel.Count,
                 Date = viewModel.Date,
+                People = PeopleMapper.Map(viewModel.People),
+                Book = BookMapper.Map(viewModel.Book),
             };
             return entity;
         }

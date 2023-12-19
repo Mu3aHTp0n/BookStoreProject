@@ -11,13 +11,15 @@ namespace BookStoreProject.Infrastructure
     {
         public long ID { get; set; }
 
+        [Column("People_ID")]
         public long PeopleId { get; set; }
 
+        [Column("Book_ID")]
         public long BookId { get; set; }
 
         public long Count { get; set; }
 
-        public decimal Date { get; set; }
+        public string Date { get; set; }
 
         public virtual BookEntity Book { get; set; }
 

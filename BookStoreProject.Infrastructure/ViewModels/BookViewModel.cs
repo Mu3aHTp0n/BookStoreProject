@@ -18,8 +18,14 @@ namespace BookStoreProject.Infrastructure.ViewModels
 
         public string Title { get; set; }
 
-        public long Cost { get; set; }
+        public string Cost { get; set; }
 
-        public long Quantity { get; set; }
+        public string Quantity { get; set; }
+
+        public AuthorViewModel Author { get; set; }
+
+        public PublisherViewModel Publisher { get; set; }
+
+        public GenreViewModel Genre { get; set; }
     }
 }

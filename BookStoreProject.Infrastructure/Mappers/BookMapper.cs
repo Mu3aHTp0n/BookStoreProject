@@ -20,6 +20,8 @@ namespace BookStoreProject.Infrastructure.Mappers
                 Title = entity.Title,
                 Cost = entity.Cost,
                 Quantity = entity.Quantity,
+                Genre = GenreMapper.Map(entity.Genre),
+                Author = AuthorMapper.Map(entity.Author),
             };
             return viewModel;
         }
@@ -35,6 +37,8 @@ namespace BookStoreProject.Infrastructure.Mappers
                 Title = viewModel.Title,
                 Cost = viewModel.Cost,
                 Quantity = viewModel.Quantity,
+                Genre = GenreMapper.Map(viewModel.Genre),
+                Author = AuthorMapper.Map(viewModel.Author),
             };
             return entity;
         }

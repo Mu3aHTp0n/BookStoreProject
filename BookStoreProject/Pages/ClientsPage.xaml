@@ -46,7 +46,7 @@
                   IsReadOnly="True"
                   AutoGenerateColumns="False" 
                   CanUserReorderColumns="False"
-                  CanUserAddRows="True">
+                  CanUserSortColumns="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия"  
                                     Width="*" 

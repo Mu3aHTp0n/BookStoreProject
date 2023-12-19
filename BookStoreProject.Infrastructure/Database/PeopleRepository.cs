@@ -50,7 +50,7 @@ namespace BookStoreProject.Infrastructure.Database
             entity.Sex = entity.Sex.Trim();
             entity.UserLogin = entity.UserLogin.Trim();
 
-            if (string.IsNullOrEmpty(entity.SecondName) || string.IsNullOrEmpty(entity.Name) || string.IsNullOrEmpty(entity.SurName) || string.IsNullOrEmpty(entity.DateOfBirth) || string.IsNullOrEmpty(entity.Sex) || string.IsNullOrEmpty(entity.UserLogin))
+            if (string.IsNullOrEmpty(entity.SecondName) || string.IsNullOrEmpty(entity.Name) || string.IsNullOrEmpty(entity.DateOfBirth) || string.IsNullOrEmpty(entity.Sex) || string.IsNullOrEmpty(entity.UserLogin))
             {
                 throw new Exception("Не все поля заполнены");
             }

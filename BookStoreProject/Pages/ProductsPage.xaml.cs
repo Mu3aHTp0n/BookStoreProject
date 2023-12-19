@@ -1,4 +1,5 @@
 ﻿using BookStoreProject.Infrastructure.Database;
+using BookStoreProject.Infrastructure.ViewModels;
 using BookStoreProject.Windows;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,50 @@ namespace BookStoreProject.Pages
             MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
             mainWindow.Title = menuPage.Title;
             mainWindow.MainFrame.Navigate(menuPage);
+        }
+
+        private void AddProduct(object sender, RoutedEventArgs e)
+        {
+            AddProductWindow addProduct = new AddProductWindow();
+            addProduct.Show();
+            Window.GetWindow(this).Close();
+        }
+
+        private void UpdateGrid()
+        {
+            ProductsGrid.ItemsSource = _repository.GetList();
+        }
+
+        private void DeleteProduct(object sender, RoutedEventArgs e)
+        {
+            if (ProductsGrid.SelectedItem == null)
+            {
+                MessageBox.Show("Ничего не выбрано для удаления");
+                return;
+            }
+
+            var item = ProductsGrid.SelectedItem as BookViewModel;
+            if (item == null)
+            {
+                MessageBox.Show("Не удалось получить данные");
+                return;
+            }
+            _repository.DeleteBook(item.ID);
+            UpdateGrid();
+        }
+
+        private void FindProd(object sender, RoutedEventArgs e)
+        {
+            string search = find.Text;
+            if (string.IsNullOrEmpty(search))
+            {
+                ProductsGrid.ItemsSource = _repository.GetList();
+            }
+            else
+            {
+                List<BookViewModel> result = _repository.Search(search);
+                ProductsGrid.ItemsSource = result;
+            }
         }
     }
 }

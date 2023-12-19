@@ -30,9 +30,9 @@ namespace BookStoreProject.Infrastructure
         [StringLength(2147483647)]
         public string Title { get; set; }
 
-        public long Cost { get; set; }
+        public string Cost { get; set; }
 
-        public long Quantity { get; set; }
+        public string Quantity { get; set; }
 
         public virtual AuthorEntity Author { get; set; }
 

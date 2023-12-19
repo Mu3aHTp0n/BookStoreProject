@@ -44,14 +44,20 @@
                   IsReadOnly="True"
                   AutoGenerateColumns="False" 
                   CanUserReorderColumns="False"
-                  CanUserAddRows="True">
+                  CanUserSortColumns="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия"  
+                <DataGridTextColumn Header="Заказчик"  
                                     Width="*" 
-                                    Binding="{Binding ID}"/>
-                <DataGridTextColumn Header="Имя"
+                                    Binding="{Binding People.SecondName}"/>
+                <DataGridTextColumn Header="Товар"  
+                                    Width="*" 
+                                    Binding="{Binding Book.Title}"/>
+                <DataGridTextColumn Header="Количество"  
+                                    Width="*" 
+                                    Binding="{Binding Count}"/>
+                <DataGridTextColumn Header="Дата заказа"
                                     Width="*"
-                                    Binding="{Binding Name}"/>
+                                    Binding="{Binding Date}"/>
             </DataGrid.Columns>
         </DataGrid>
 

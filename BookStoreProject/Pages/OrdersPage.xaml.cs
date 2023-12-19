@@ -22,12 +22,12 @@ namespace BookStoreProject.Pages
     /// </summary>
     public partial class OrdersPage : Page
     {
-        private RoleRepository _repository;
+        private OrderingRepository _repository;
         public OrdersPage()
         {
             InitializeComponent();
             // Источник данных для таблицы с заказами
-            _repository = new RoleRepository();
+            _repository = new OrderingRepository();
             OrdersGrid.ItemsSource = _repository.GetList();
         }
 
