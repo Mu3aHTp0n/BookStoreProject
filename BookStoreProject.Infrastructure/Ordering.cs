@@ -17,7 +17,7 @@ namespace BookStoreProject.Infrastructure
         [Column("Book_ID")]
         public long BookId { get; set; }
 
-        public long Count { get; set; }
+        public string Count { get; set; }
 
         public string Date { get; set; }
 

@@ -103,6 +103,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\AddOrderingWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Windows\AddPeopleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -137,6 +141,9 @@
     </Compile>
     <Compile Include="Pages\ProductsPage.xaml.cs">
       <DependentUpon>ProductsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddOrderingWindow.xaml.cs">
+      <DependentUpon>AddOrderingWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\AddPeopleWindow.xaml.cs">
       <DependentUpon>AddPeopleWindow.xaml</DependentUpon>
